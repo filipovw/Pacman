@@ -1,3 +1,4 @@
+import Pacman from "./Pacman.js";
 export default class TileMap {
   constructor(tileSize) {
     this.tileSize = tileSize;
@@ -8,18 +9,20 @@ export default class TileMap {
     this.wall = new Image();
     this.wall.src = "../images/wall.png";
   }
-
+  //1 - wall
+  //0 - yellow dots
+  //2 - pacman
   map = [
-    [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   ];
 
@@ -32,6 +35,17 @@ export default class TileMap {
         } else if (tile === 0) {
           this.#drawDot(ctx, column, row, this.tileSize);
         }
+
+        /* Testing purposes
+        ctx.strokeStyle = "yellow";
+        ctx.strokeRect(
+          column * this.tileSize,
+          row * this.tileSize,
+          this.tileSize,
+          this.tileSize
+          
+        );
+        */
       }
     }
   }
@@ -54,6 +68,24 @@ export default class TileMap {
       size,
       size
     );
+  }
+
+  getPacman(velocity) {
+    for (let row = 0; row < this.map.length; row++) {
+      for (let column = 0; column < this.map[row].length; column++) {
+        let tile = this.map[row][column];
+        if (tile === 4) {
+          this.map[row][column] = 0;
+          return new Pacman(
+            column * this.tileSize,
+            (row = this.tileSize),
+            this.tileSize,
+            velocity,
+            this
+          );
+        }
+      }
+    }
   }
 
   setCanvasSize(canvas) {
