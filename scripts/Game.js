@@ -1,7 +1,7 @@
 import TileMap from "./TileMap.js";
 
 const tileSize = 32;
-const velocity = 1;
+const velocity = 1.5;
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
