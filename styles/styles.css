@@ -1,0 +1,17 @@
+#canvas {
+  box-shadow: 10px 10px 20px black;
+}
+
+h1 {
+  text-align: center;
+  font-family: comic sans MS;
+  color: lightgrey;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(#360033, #0b8793);
+}
