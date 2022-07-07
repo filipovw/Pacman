@@ -1,6 +1,6 @@
 # Pacman
 GOALS:
-1. Cooler background
+1. Cooler background X
 2. Randomly generated tile map
 3. WASD support
 4. Randomly generated ghosts
