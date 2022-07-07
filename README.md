@@ -9,7 +9,6 @@ GOALS:
 7. +1 Ghost count and random movement speed of ghosts
 8. Ghost movement not random, but calculated with AI
 9. Make game restart after win or loss without having to refresh the page
-10. Change brick texture to something cooler
-11. Cross platform
-12. P2P client server - multiplayer
-13. Add retro color bleeding
+10. Cross platform
+11. P2P client server - multiplayer
+12. Add retro color bleeding
