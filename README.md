@@ -8,3 +8,4 @@ GOALS:
 6. Cross platform
 7. P2P client server - multiplayer
 8. Add retro color bleeding
+9. Improve maps
