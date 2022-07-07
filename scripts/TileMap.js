@@ -13,11 +13,35 @@ export default class TileMap {
     this.pinkDot.src = "images/pinkDot.png";
 
     this.wall = new Image();
-    this.wall.src = "images/wall.png";
+    //this.wall.src = this.#getRandomImage(imgArray);
+    //"images/walls/wall.png";
 
     this.powerDot = this.pinkDot;
     this.powerDotAnmationTimerDefault = 30;
     this.powerDotAnmationTimer = this.powerDotAnmationTimerDefault;
+
+    var imgArray = new Array();
+
+    imgArray[0] = new Image();
+    imgArray[0].src = "./images/walls/wall.png";
+
+    imgArray[1] = new Image();
+    imgArray[1].src = "./images/walls/wall1.png";
+
+    imgArray[2] = new Image();
+    imgArray[2].src = "./images/walls/wall2.jpg";
+
+    imgArray[3] = new Image();
+    imgArray[3].src = "./images/walls/wall3.jpg";
+
+    this.wall.src = this.#getRandomImage(imgArray, "./images/walls/");
+  }
+
+  #getRandomImage(imgAr, path) {
+    path = path || "./images/walls/"; // default path here
+    let num = Math.floor(Math.random() * imgAr.length);
+    let img = imgAr[num];
+    return img.src;
   }
 
   //1 - wall
