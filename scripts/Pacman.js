@@ -96,28 +96,29 @@ export default class Pacman {
 
   #keydown = (event) => {
     //up
-    if (event.keyCode == 38) {
+    console.log(event.code);
+    if (event.code == "ArrowUp" || event.code == "KeyW") {
       if (this.currentMovingDirection == MovingDirection.down)
         this.currentMovingDirection = MovingDirection.up;
       this.requestedMovingDirection = MovingDirection.up;
       this.madeFirstMove = true;
     }
     //down
-    if (event.keyCode == 40) {
+    if (event.code == "ArrowDown" || event.code == "KeyS") {
       if (this.currentMovingDirection == MovingDirection.up)
         this.currentMovingDirection = MovingDirection.down;
       this.requestedMovingDirection = MovingDirection.down;
       this.madeFirstMove = true;
     }
     //left
-    if (event.keyCode == 37) {
+    if (event.code == "ArrowLeft" || event.code == "KeyA") {
       if (this.currentMovingDirection == MovingDirection.right)
         this.currentMovingDirection = MovingDirection.left;
       this.requestedMovingDirection = MovingDirection.left;
       this.madeFirstMove = true;
     }
     //right
-    if (event.keyCode == 39) {
+    if (event.code == "ArrowRight" || event.code == "KeyD") {
       if (this.currentMovingDirection == MovingDirection.left)
         this.currentMovingDirection = MovingDirection.right;
       this.requestedMovingDirection = MovingDirection.right;
