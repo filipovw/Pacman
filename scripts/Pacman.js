@@ -96,7 +96,6 @@ export default class Pacman {
 
   #keydown = (event) => {
     //up
-    console.log(event.code);
     if (event.code == "ArrowUp" || event.code == "KeyW") {
       if (this.currentMovingDirection == MovingDirection.down)
         this.currentMovingDirection = MovingDirection.up;

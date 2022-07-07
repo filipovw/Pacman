@@ -68,7 +68,6 @@ function drawGameEnd() {
     gradient.addColorStop("1.0", "red");
 
     let textWidth = ctx.measureText(text).width;
-    console.log(textWidth);
     ctx.fillStyle = gradient;
     ctx.fillText(text, (canvas.width - textWidth) / 2, canvas.height / 2);
     setTimeout(function () {
