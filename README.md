@@ -14,3 +14,4 @@ GOALS:
 12. Change brick texture to something cooler
 13. Cross platform
 14. P2P client server - multiplayer
+15. Add retro color bleeding
