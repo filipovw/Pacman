@@ -40,14 +40,9 @@ export default class TileMap {
     let img = imgAr[num];
     return img.src;
   }
+  //right now only 1 map works
+  map = randomIntFromInterval(4, 4);
 
-  map = randomIntFromInterval(1, 4);
-  //1 - wall
-  //0 - dots
-  //4 - pacman
-  //5 - empty space
-  //6 - enemy
-  //7 - power dot
   draw(ctx) {
     for (let row = 0; row < this.map.length; row++) {
       for (let column = 0; column < this.map[row].length; column++) {
