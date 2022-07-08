@@ -1,5 +1,5 @@
 import Pacman from "./Pacman.js";
-import Enemy from "./Ghost.js";
+import Enemy from "./Enemy.js";
 import MovingDirection from "./MovingDirection.js";
 
 export default class TileMap {

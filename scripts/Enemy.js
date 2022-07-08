@@ -1,13 +1,12 @@
 import MovingDirection from "./MovingDirection.js";
 
-export default class Ghost {
+export default class Enemy {
   constructor(x, y, tileSize, velocity, tileMap) {
     this.x = x;
     this.y = y;
     this.tileSize = tileSize;
     this.velocity = velocity;
     this.tileMap = tileMap;
-    console.log(tileMap.getPacman());
     this.#loadImages();
 
     this.movingDirection = Math.floor(
