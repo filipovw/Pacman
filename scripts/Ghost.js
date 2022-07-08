@@ -12,6 +12,10 @@ export default class Ghost {
 
     this.movingDirection = Math.floor(
       Math.random() * Object.keys(MovingDirection).length
+      //If Pacman is in the same row as Ghost, move in the same direction as Pacman
+      //If Pacman is in the same column as Ghost, move in the same direction as Pacman
+      //If Pacman is in a different row and column as Ghost, move in the direction of the shortest path
+      //If Pacman is in a different row and column as Ghost, and there is no path to Pacman, move in a random direction
     );
 
     this.directionTimerDefault = this.#random(10, 25);
@@ -94,6 +98,11 @@ export default class Ghost {
         }
       }
     }
+
+    //If Pacman is in the same row as Ghost, move in the same direction as Pacman
+    //If Pacman is in the same column as Ghost, move in the same direction as Pacman
+    //If Pacman is in a different row and column as Ghost, move in the direction of the shortest path
+    //If Pacman is in a different row and column as Ghost, and there is no path to Pacman, move in a random direction
   }
 
   #move() {
