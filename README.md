@@ -5,5 +5,5 @@ GOALS:
 3. Random movement speed of ghosts
 4. Cross platform
 5. P2P client server - multiplayer
-6. Improve maps
+6. Add more maps
 7. Randomly colored ghosts
