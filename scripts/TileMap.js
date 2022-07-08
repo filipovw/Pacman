@@ -1,5 +1,5 @@
 import Pacman from "./Pacman.js";
-import Enemy from "./Enemy.js";
+import Enemy from "./Ghost.js";
 import MovingDirection from "./MovingDirection.js";
 
 export default class TileMap {
@@ -12,15 +12,11 @@ export default class TileMap {
     this.pinkDot = new Image();
     this.pinkDot.src = "images/pinkDot.png";
 
-    this.wall = new Image();
-    //this.wall.src = this.#getRandomImage(imgArray);
-    //"images/walls/wall.png";
-
     this.powerDot = this.pinkDot;
     this.powerDotAnmationTimerDefault = 30;
     this.powerDotAnmationTimer = this.powerDotAnmationTimerDefault;
 
-    var imgArray = new Array();
+    let imgArray = new Array();
 
     imgArray[0] = new Image();
     imgArray[0].src = "./images/walls/wall.png";
@@ -34,6 +30,7 @@ export default class TileMap {
     imgArray[3] = new Image();
     imgArray[3].src = "./images/walls/wall3.jpg";
 
+    this.wall = new Image();
     this.wall.src = this.#getRandomImage(imgArray, "./images/walls/");
   }
 

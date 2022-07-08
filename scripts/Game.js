@@ -1,7 +1,6 @@
 import TileMap from "./TileMap.js";
 
-const tileSize = 32;
-const velocity = 2;
+const [tileSize, velocity] = [32, 2];
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
@@ -9,8 +8,8 @@ const tileMap = new TileMap(tileSize);
 const pacman = tileMap.getPacman(velocity);
 const enemies = tileMap.getEnemies(velocity);
 
-let gameOver = false;
-let gameWin = false;
+let [gameOver, gameWin] = [false, false];
+
 const gameOverSound = new Audio("./sounds/sounds_gameOver.wav");
 const gameWinSound = new Audio("./sounds/sounds_gameWin.wav");
 
@@ -63,9 +62,9 @@ function drawGameEnd() {
 
     ctx.font = "75px comic sans";
     const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-    gradient.addColorStop("0", "magenta");
-    gradient.addColorStop("0.5", "blue");
-    gradient.addColorStop("1.0", "red");
+    gradient.addColorStop("0", "#0f0c29");
+    gradient.addColorStop("0.5", "#302b63");
+    gradient.addColorStop("1.0", "#24243e");
 
     let textWidth = ctx.measureText(text).width;
     ctx.fillStyle = gradient;
