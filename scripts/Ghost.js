@@ -7,7 +7,7 @@ export default class Ghost {
     this.tileSize = tileSize;
     this.velocity = velocity;
     this.tileMap = tileMap;
-
+    console.log(tileMap.getPacman());
     this.#loadImages();
 
     this.movingDirection = Math.floor(
@@ -72,7 +72,7 @@ export default class Ghost {
     }
   }
 
-  #changeDirection() {
+  #changeDirection(pacman) {
     this.directionTimer--;
     let newMoveDirection = null;
     if (this.directionTimer == 0) {
@@ -98,7 +98,6 @@ export default class Ghost {
         }
       }
     }
-
     //If Pacman is in the same row as Ghost, move in the same direction as Pacman
     //If Pacman is in the same column as Ghost, move in the same direction as Pacman
     //If Pacman is in a different row and column as Ghost, move in the direction of the shortest path
