@@ -1,11 +1,9 @@
 # Pacman
 GOALS:
 1. Sophisticated ghost AI
-2. Score system
-3. Better UI - font, color
-4. Random movement speed of ghosts
-5. Cross platform
-6. P2P client server - multiplayer
-7. Add retro color bleeding effect
-8. Improve maps
-9. Randomly colored ghosts
+2. Better UI - font, color, score system
+3. Random movement speed of ghosts
+4. Cross platform
+5. P2P client server - multiplayer
+6. Improve maps
+7. Randomly colored ghosts
