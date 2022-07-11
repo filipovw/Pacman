@@ -7,4 +7,3 @@ GOALS:
 5. P2P client server - multiplayer
 6. Add more maps
 7. Randomly colored ghosts
-8. Fix gh pages problem with urls
