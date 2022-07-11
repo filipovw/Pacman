@@ -15,14 +15,14 @@ export default class Pacman {
     this.pacmanAnimationTimer = null;
 
     this.pacmanRotation = this.Rotation.right;
-    this.wakaSound = new Audio("../sounds/sounds_waka.wav");
+    this.wakaSound = new Audio("sounds/sounds_waka.wav");
 
-    this.powerDotSound = new Audio("../sounds/sounds_power_dot.wav");
+    this.powerDotSound = new Audio("sounds/sounds_power_dot.wav");
     this.powerDotActive = false;
     this.powerDotAboutToExpire = false;
     this.timers = [];
 
-    this.eatGhostSound = new Audio("../sounds/sounds_eat_ghost.wav");
+    this.eatGhostSound = new Audio("sounds/sounds_eat_ghost.wav");
 
     this.madeFirstMove = false;
 
