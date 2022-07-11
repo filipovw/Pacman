@@ -7,3 +7,5 @@ GOALS:
 5. P2P client server - multiplayer
 6. Add more maps
 7. Randomly colored ghosts
+
+The current project is making a Pac-Man videogame. Skills demonstrated: JS, HTML, CSS knowledge
